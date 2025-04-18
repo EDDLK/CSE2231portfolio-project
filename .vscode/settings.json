@@ -31,7 +31,8 @@
     ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
-        "lib/**/*.jar"
+        "lib/components.jar",
+        "/Users/ed_liu/Desktop/CSE2231_NEWproject/CSE2231portfolio-project/lib/components.jar"
     ],
     "java.saveActions.cleanup": true,
     "java.cleanup.actions": [
