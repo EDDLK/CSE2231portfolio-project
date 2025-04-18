@@ -1,12 +1,10 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Haopeng Liu
+- **Dot Number**: liu.10014
+- **Due Date**: 02/4 @ 12:40 PM EST
 
 ## Assignment Overview
-
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,8 +27,6 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
-
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
 opening the TODOs window from the sidebar. The icon looks like a tree and will
@@ -52,8 +48,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
-
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
 what we're hoping you will learn through this particular aspect of the portfolio
@@ -66,8 +60,6 @@ project. Specifically, students should be able to:
    discipline
 
 ## Assignment Rubric: 10 Points
-
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -97,7 +89,6 @@ Below is further rationale/explanation for the rubric items above:
    should contain both kernel and secondary methods. Also, null and aliasing
    must be avoided, when possible. The methods themselves must also be in
    justifiable locations, such as kernel or secondary.
-
 ## Pre-Assignment
 
 > Before you jump in, we want you to take a moment to share your interests
@@ -106,15 +97,10 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+I like play video games, gym, ski and hangout with friends, tbh I don't like CS at first, it's just because it was good for looking for job, but now I think I'm kind attracted by CS, since I can do lots of amazing work by typing code, I haven't really have a good idea about what to do for this project so I will just write some general idea, but I believe I will have a perfect project in the end, I really like to learn VS code, the only new stuff in this school!
 
 ## Assignment
 
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
@@ -122,7 +108,6 @@ that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
 
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -132,7 +117,6 @@ you're just brainstorming right now. You do not have to commit to anything.
 
 ### Example Component
 
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -200,68 +184,71 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: CurrencyConverter
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - The purpose of this component is to model a currency converter that allows users to convert between different currencies. This component can be useful for international students managing finances and exchange rates. The kernel methods handle the core conversion, while the secondary methods provide additional functionalities such as automatic rate updates and historical tracking.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    -`void setExchangeRate(String fromCurrency, String toCurrency, double rate)`: Sets the exchange rate between two currencies.
+  - `double convert(double amount, String fromCurrency, String toCurrency)`: Converts a given amount from one currency to another.
+  - `boolean isValidCurrency(String currencyCode)`: Reports whether the provided currency code is valid.
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    -`void updateRatesAutomatically()`: Connects to an API to update exchange rates in real-time.
+  - `double convertToCNY(double amount, String fromCurrency)`: Converts any currency to Chinese Yuan (CNY) for convenience.
+  - `List<String> getSupportedCurrencies()`: Returns a list of all available currency codes.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
-    - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component need any enums or constants (e.g.,
-      `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Can you implement your secondary methods using your kernel methods?
-      Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+    - Would this component be mutable? Answer and explain
+    - Yes, exchange rates change frequently, so the component needs to update rates dynamically.
+  - Would this component rely on any internal classes (e.g., `Map.Pair`)? Answer and explain
+    - Possibly, it may use a mapping structure to store exchange rates efficiently.
+  - Would this component need any enums or constants (e.g., `Program.Instruction`)? Answer and explain
+    - Yes, for standardized currency codes (e.g., `USD`, `EUR`, `CNY`).
+  - Can you implement your secondary methods using your kernel methods? Answer, explain, and give at least one example
+    - Yes. For example, `convertToCNY` can use `convert(amount, fromCurrency, "CNY")`.
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: StudyPlanner
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - The purpose of this component is to help students organize and manage their study schedules. It allows users to add study tasks, set deadlines, and generate a prioritized study plan. Kernel methods handle task management, while secondary methods provide additional functionalities such as automatic reminders and daily study recommendations.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    -`void addTask(String taskName, LocalDate deadline)`: Adds a new study task with a deadline.
+  - `boolean removeTask(String taskName)`: Removes a study task.
+  - `boolean isTaskDueSoon(String taskName)`: Reports whether a task is due within the next 48 hours.
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `void generateDailyStudyPlan()`: Creates a study plan based on deadlines and priorities.
+  - `void sendReminderNotifications()`: Sends reminders for upcoming tasks.
+  - `List<String> getIncompleteTasks()`: Returns a list of pending tasks.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
-    - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component need any enums or constants (e.g.,
-      `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Can you implement your secondary methods using your kernel methods?
-      Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+    - Would this component be mutable? Answer and explain
+    - Yes, tasks need to be added, removed, and updated regularly.
+  - Would this component rely on any internal classes (e.g., `Map.Pair`)? Answer and explain
+    - Possibly, a `Task` class could be used to store details like name, deadline, and priority.
+  - Would this component need any enums or constants (e.g., `Program.Instruction`)? Answer and explain
+    - Yes, for priority levels (e.g., `LOW`, `MEDIUM`, `HIGH`).
+  - Can you implement your secondary methods using your kernel methods? Answer, explain, and give at least one example
+    - Yes. The `generateDailyStudyPlan` method can use `isTaskDueSoon` to prioritize tasks.
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #3: LanguageFlashcards
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - The purpose of this component is to help students learn new vocabulary through flashcards. It allows users to create, review, and track progress on word lists. Kernel methods handle adding and retrieving flashcards, while secondary methods provide extra functionalities such as spaced repetition and difficulty tracking.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void addFlashcard(String word, String meaning)`: Adds a new flashcard with a word and its meaning.
+  - `String getMeaning(String word)`: Retrieves the meaning of a word.
+  - `boolean removeFlashcard(String word)`: Removes a flashcard from the system.
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `void reviewFlashcards()`: Generates a review session based on spaced repetition.
+  - `void markDifficultWord(String word)`: Marks a word as difficult for extra practice.
+  - `List<String> getReviewList()`: Returns a list of words that need to be reviewed.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
-    - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component need any enums or constants (e.g.,
-      `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Can you implement your secondary methods using your kernel methods?
-      Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+    - Would this component be mutable? Answer and explain
+    - Yes, users will continuously add and remove flashcards as they learn.
+  - Would this component rely on any internal classes (e.g., `Map.Pair`)? Answer and explain
+    - Possibly, a `Flashcard` class could be used to store each word-meaning pair.
+  - Would this component need any enums or constants (e.g., `Program.Instruction`)? Answer and explain
+    - Yes, for difficulty levels (e.g., `EASY`, `MEDIUM`, `HARD`).
+  - Can you implement your secondary methods using your kernel methods? Answer, explain, and give at least one example
+    - Yes. The `reviewFlashcards` method can use `getReviewList` to determine which words need more practice.
 
 ## Post-Assignment
 
@@ -269,8 +256,6 @@ The following sections detail everything that you should do once you've
 completed the assignment.
 
 ### Changelog
-
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -309,7 +294,6 @@ of development.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
 
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
@@ -319,11 +303,8 @@ all your work is there before submitting. For future assignments, you will
 just be submitting a link to a pull request. This will be the only time
 you have to submit any PDFs.
 
-<!-- TODO: upload a PDF of this document and the CHANGELOG to Carmen then delete this comment -->
 
 ### Peer Review
-
-<!-- TODO: review the peer review guidelines then delete this comment -->
 
 Following the completion of this assignment, you will be assigned three
 students' component brainstorming assignments for review. Your job during the
@@ -350,7 +331,6 @@ If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
 
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [example-components]: https://therenegadecoder.com/code/the-never-ending-list-of-small-programming-project-ideas/
 [markdown-to-pdf-guide]: https://therenegadecoder.com/blog/how-to-convert-markdown-to-a-pdf-3-quick-solutions/
