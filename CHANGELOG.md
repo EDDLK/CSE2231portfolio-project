@@ -97,3 +97,19 @@ the following form: YYYY.0M.0D.
 
 - Completed final class CurrencyConverter1L with nested map logic and all kernel methods
 
+## [2025.04.18]
+
+### Added
+- Added JUnit 4.13.2 and Hamcrest 1.3 jars to `lib/`
+- Wrote `CurrencyConverter1LTest.java` and `CurrencyConverterTest.java` with full Javadoc and assertions
+- Created `.classpath` file to enable testing with added libraries
+
+### Fixed
+- Resolved all compiler errors related to missing methods and package paths
+- Corrected package structure for `Standard.java` and imports
+
+### Polished
+- Wrote reflection and changelog for finishing touches
+- Cleaned up comments and ensured max line length limits were followed
+
+

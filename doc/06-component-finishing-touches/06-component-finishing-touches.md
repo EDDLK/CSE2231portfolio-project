@@ -1,8 +1,8 @@
 # Portfolio Part 6: Finishing Touches
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Name**: Haopeng Liu
+- **Dot Number**: liu.10014
+- **Due Date**: Apr 18, 11.59PM
 
 ## Assignment Overview
 
@@ -50,7 +50,6 @@ course, but just knowing about them could set you up for long term success.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -141,7 +140,6 @@ to see them. If you don't like this workflow, you may try following the
 rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
 
-<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 
@@ -308,17 +306,20 @@ Take some time to fill them out honestly.
 > understand software development and why?
 
 <!-- TODO: discuss -->
+After doing this portfolio project, I understand software development better because I actually had to write every part of the component myself. It’s different from following short assignments—this felt more like a real project where I had to think about structure, naming, and testability.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
 <!-- TODO: discuss -->
+Yes, especially with interface inheritance and file organization. I used to think I understood Java classes and packages well, but once things got layered (like abstract classes and interfaces), it got confusing. I fixed it by looking back at lecture slides, asking friends, and just trial-and-error.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
 <!-- TODO: discuss -->
+I still enjoy software development, but now I realize it’s more about debugging and fixing problems than just writing new code. It can be frustrating at times, but also satisfying when everything finally works.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -327,17 +328,26 @@ Take some time to fill them out honestly.
 > through this process?
 
 <!-- TODO: discuss -->
+I learned how to plan a full component, work with abstract classes and interfaces together, and organize my code in a clean structure. I also got better at debugging and figuring out why things don’t compile.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
 <!-- TODO: discuss -->
+Designed and implemented a full Java software component from scratch
+
+Applied abstract classes, interfaces, and layered design
+
+Created and ran unit tests using JUnit
+
+Debugged and resolved compile-time and runtime errors in a modular codebase
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
 <!-- TODO: discuss -->
+It made me more confident in doing backend or logic-based programming. I don’t feel lost when working with multiple Java files now. I’m actually more interested in building real software systems after this.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
@@ -345,10 +355,10 @@ Take some time to fill them out honestly.
 > you stay on your path?
 
 <!-- TODO: discuss -->
+I could take more advanced software design classes or join coding clubs. For mentors, I might reach out to my professor or TAs, or even classmates who seem experienced—they’ve been helpful this semester.
 
 ### Changelog
 
-<!-- TODO: update CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -367,8 +377,8 @@ the following form: YYYY.0M.0D.
 
 ### Added
 
-- Designed test suite for <!-- insert name of component here --> component
-- Designed two different use cases for <!-- insert name of component here --> component
+- Designed test suite for CurrencyConverter component
+- Designed two different use cases for CurrencyConverter component
 
 ### Updated
 
@@ -384,7 +394,6 @@ request merge (or at least tag your commits). This is not required.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
 
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull

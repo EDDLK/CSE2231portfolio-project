@@ -1,6 +1,6 @@
 package components.currencyconverter;
 
-import components.standard.Standard;
+import components.Standard.Standard;
 
 /**
  * kernel interface for CurrencyConverter component.

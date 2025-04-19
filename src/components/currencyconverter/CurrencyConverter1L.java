@@ -54,8 +54,8 @@ public class CurrencyConverter1L extends CurrencyConverterSecondary {
     public final double convert(double amount, String from, String to) {
         // basic checks
         assert amount >= 0 : "can't convert negative amounts";
-        assert this.isValidCurrency(from) && this.isValidCurrency(
-                to) : "both currencies must be in our system";
+        assert this.isValidCurrency(from) && this
+                .isValidCurrency(to) : "both currencies must be in our system";
 
         // multiply amount by the exchange rate
         return this.rates.get(from).get(to) * amount;
@@ -68,28 +68,52 @@ public class CurrencyConverter1L extends CurrencyConverterSecondary {
     }
 
     @Override
+    public final void copyFrom(CurrencyConverter t) {
+        assert t != null : "t is null";
+        assert t instanceof CurrencyConverter1L : "Can only copy from CurrencyConverter1L";
+
+        CurrencyConverter1L other = (CurrencyConverter1L) t;
+        this.rates = new HashMap<>(other.rates);
+    }
+
+    @Override
     public final List<String> getSupportedCurrencies() {
         // return list of all currencies we have
         return new ArrayList<>(this.rates.keySet());
     }
 
-    @Override
+    /**
+     * creates a new empty currency converter.
+     *
+     * @return a fresh instance with no rates defined
+     */
     public final CurrencyConverter newInstance() {
         // create a new empty converter
         return new CurrencyConverter1L();
     }
 
-    @Override
+    /**
+     * removes all currency rates from this converter.
+     *
+     * @ensures this converter contains no rates after call
+     */
     public final void clear() {
         // remove all rates
         this.rates.clear();
     }
 
-    @Override
+    /**
+     * transfers all rates from source converter to this one.
+     *
+     * @param source
+     *            the converter to transfer from
+     * @requires source != null and source instanceof CurrencyConverter1L
+     * @ensures source is empty after transfer and this has all source's rates
+     */
     public final void transferFrom(CurrencyConverter source) {
         // check source is valid
         assert source != null : "source converter can't be null";
-        assert source instanceof CurrencyConverter1L : "can only transfer from another CurrencyConverter1L";
+        assert source instanceof CurrencyConverter1L : "must copy from another CurrencyConverter1L";
 
         // swap the rates map
         CurrencyConverter1L src = (CurrencyConverter1L) source;
